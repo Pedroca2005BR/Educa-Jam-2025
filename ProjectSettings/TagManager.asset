@@ -42,5 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1548514691
+    locked: 0
+  - name: Lixo
+    uniqueID: 2522084457
+    locked: 0
+  - name: Municao
+    uniqueID: 424541543
+    locked: 0
+  - name: Nave
+    uniqueID: 3067538603
+    locked: 0
   m_RenderingLayers:
   - Default
