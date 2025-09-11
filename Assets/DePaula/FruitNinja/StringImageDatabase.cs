@@ -31,6 +31,7 @@ public class StringImageTuple
 {
     public string text;
     public Sprite image;
+    public bool isCorrectAnswer;
 
     public StringImageTuple(string text, Sprite image)
     {

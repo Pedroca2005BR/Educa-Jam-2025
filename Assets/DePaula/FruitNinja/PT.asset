@@ -13,5 +13,21 @@ MonoBehaviour:
   m_Name: PT
   m_EditorClassIdentifier: 
   database:
-  - text: 
+  - text: Gramatica
     image: {fileID: 0}
+    isCorrectAnswer: 1
+  - text: Sujeito
+    image: {fileID: 0}
+    isCorrectAnswer: 0
+  - text: Ninja
+    image: {fileID: 0}
+    isCorrectAnswer: 1
+  - text: Fruit
+    image: {fileID: 0}
+    isCorrectAnswer: 0
+  - text: Chinelo
+    image: {fileID: 0}
+    isCorrectAnswer: 1
+  - text: Cachorro
+    image: {fileID: 0}
+    isCorrectAnswer: 0

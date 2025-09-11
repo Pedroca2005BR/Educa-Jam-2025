@@ -8,12 +8,46 @@ public class CuttableBehaviour : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     [SerializeField] Image Image;
+    public bool correctAnswer = false;
+
+    Animator animator;
+    Rigidbody2D rb;
+    BoxCollider2D boxCollider;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerPrefs.SetInt("FNScore", PlayerPrefs.GetInt("FNScore", 0) + 1);
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = Vector2.zero;
+            boxCollider.enabled = false;
+
+            if (correctAnswer)
+            {
+                ScoreManager.instance.score++;
+                animator.SetTrigger("CorrectHit");
+            }
+            else
+            {
+                animator.SetTrigger("WrongHit");
+                ScoreManager.instance.LoseLife();
+            }
+        }
+        else if (collision.gameObject.CompareTag("Destroyer"))
+        {
+            if (correctAnswer)
+            {
+                ScoreManager.instance.LoseLife();
+            }
+
+            Destroy(gameObject);
         }
     }
 
@@ -27,5 +61,10 @@ public class CuttableBehaviour : MonoBehaviour
     {
         Image.enabled = true;
         Image.sprite = sprite;
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

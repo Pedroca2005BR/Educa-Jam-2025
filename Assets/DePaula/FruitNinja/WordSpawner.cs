@@ -11,13 +11,13 @@ public class WordSpawner : MonoBehaviour
     [SerializeField] Transform spawnAreaEnd;
     public SquareArea throwForceLimits;
     [Space]
-    [Range(0.1f, 3f)] public float spawnCooldown = 1f;
+    [Range(0.1f, 5f)] public float spawnCooldown = 1f;
 
     [Space]
     [SerializeField] List<DatabaseConfig> databases = new List<DatabaseConfig>();
 
     int difficultyLevel = 0;
-    Subject currentSubject;
+    Subject currentSubject = Subject.Portuguese;
 
     private void Start()
     {
@@ -85,7 +85,16 @@ public class WordSpawner : MonoBehaviour
         float x = Random.Range(throwForceLimits.X1, throwForceLimits.X2);
         float y = Random.Range(throwForceLimits.Y1, throwForceLimits.Y2);
 
+        // Se o valor de x for maior que 0 (parte direita da tela), transforma o movimento lateral em negativo para jogar pro outro lado
+        if (pos.x > 0)
+        {
+            x *= -1;
+        }
+
         obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(x, y));
+
+        // Settar se eh resposta certa
+        obj.GetComponent<CuttableBehaviour>().correctAnswer = tuple.isCorrectAnswer;
     }
 
 
