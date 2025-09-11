@@ -21,7 +21,7 @@ public class WordSpawner : MonoBehaviour
 
     private void Start()
     {
-        // TO DO: Logica de dificuldade e 
+        currentSubject = (Subject)PlayerPrefs.GetInt("Subject", 1);
     }
 
 

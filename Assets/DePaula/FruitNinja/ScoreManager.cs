@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -23,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     public int maxLives = 3;
     public int score = 0;
     public int lives { get; private set; }
+    [SerializeField] GameObject loseScreen;
 
     private string scoreString;
 
@@ -43,7 +45,8 @@ public class ScoreManager : MonoBehaviour
         if (lives <= 0)
         {
             SaveScore();
-            // Lose
+            IEnumerator coroutine = LoseCoroutine();
+            StartCoroutine(coroutine);
         }
     }
 
@@ -52,5 +55,12 @@ public class ScoreManager : MonoBehaviour
         lives = maxLives;
         score = 0;
         scoreString = minigame + difficultyLevel.ToString();
+        loseScreen.SetActive(false);
+    }
+
+    IEnumerator LoseCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        loseScreen.SetActive(true);
     }
 }
