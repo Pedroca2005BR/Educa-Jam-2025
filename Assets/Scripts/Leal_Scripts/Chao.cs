@@ -34,7 +34,7 @@ public class GroundSpawner : MonoBehaviour
         GameObject tileObj = Instantiate(groundTile, new Vector3(0, 0, spawnZ), Quaternion.identity);
         activeTiles.Enqueue(tileObj);
         spawnZ += tileLength;
-
+        
         // --- SPAWN DOS PORTÕES ---
         GroundTile tile = tileObj.GetComponent<GroundTile>();
         if (tile != null && tile.gateSpawnPoint != null)
@@ -42,9 +42,10 @@ public class GroundSpawner : MonoBehaviour
             GateSpawner gateSpawner = FindFirstObjectByType<GateSpawner>();
             if (gateSpawner != null)
             {
-                gateSpawner.SpawnGateAt(tile.gateSpawnPoint.position);
+                gateSpawner.SpawnGateAt(tile.gateSpawnPoint.position, tileObj.transform); // <- aqui o tile é o pai
             }
         }
+
 
 
         // --- LIMPEZA DOS TILES ANTIGOS ---
