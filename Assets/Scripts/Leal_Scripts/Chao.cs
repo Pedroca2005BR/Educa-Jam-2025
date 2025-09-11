@@ -31,37 +31,33 @@ public class GroundSpawner : MonoBehaviour
 
     void SpawnTile()
     {
-        GameObject tile = Instantiate(groundTile, new Vector3(0, 0, spawnZ), Quaternion.identity);
-        activeTiles.Enqueue(tile);
+        GameObject tileObj = Instantiate(groundTile, new Vector3(0, 0, spawnZ), Quaternion.identity);
+        activeTiles.Enqueue(tileObj);
         spawnZ += tileLength;
 
-        // Remove tiles que ficaram muito para trás (quando o jogador passou 3 tiles à frente)
-        // Usamos Peek() para checar o primeiro da fila sem removê-lo se a condição não for satisfeita.
+        // --- SPAWN DOS PORTÕES ---
+        GroundTile tile = tileObj.GetComponent<GroundTile>();
+        if (tile != null && tile.gateSpawnPoint != null)
+        {
+            GateSpawner gateSpawner = FindFirstObjectByType<GateSpawner>();
+            if (gateSpawner != null)
+            {
+                gateSpawner.SpawnGateAt(tile.gateSpawnPoint.position);
+            }
+        }
+
+
+        // --- LIMPEZA DOS TILES ANTIGOS ---
         while (activeTiles.Count > 0)
         {
             GameObject first = activeTiles.Peek();
             float distance = player.position.z - first.transform.position.z;
             if (distance > tileLength * 3f)
             {
-                // Jogador está a mais de 3 tiles à frente: remove o tile mais antigo
                 GameObject oldTile = activeTiles.Dequeue();
                 Destroy(oldTile);
             }
-            else
-            {
-                // o tile mais antigo ainda está dentro do alcance necessário
-                break;
-            }
+            else break;
         }
     }
-
-    // void DeleteTile()
-        // {
-        //     GameObject oldTile = activeTiles.Dequeue();
-        //     if (player.position.z > oldTile.transform.position.z + tileLength)
-        //     {
-        //         Destroy(oldTile);
-        //     }
-        // }
-
 }
