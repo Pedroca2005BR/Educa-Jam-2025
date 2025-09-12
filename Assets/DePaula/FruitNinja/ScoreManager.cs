@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -21,26 +22,34 @@ public class ScoreManager : MonoBehaviour
 
     #endregion
 
+    [Header("Referencias")]
+    [SerializeField] TextMeshProUGUI scoreTextComponent;
+    [SerializeField] TextMeshProUGUI livesTextComponent;
+    [SerializeField] LoseScreenController loseScreen;
+
     public int maxLives = 3;
-    public int score = 0;
+    public int score { get; private set; } = 0;
     public int lives { get; private set; }
-    [SerializeField] GameObject loseScreen;
+    
 
     private string scoreString;
 
-    public void SaveScore()
+    private void SaveScore()
     {
         PlayerPrefs.SetInt($"{scoreString}Score", score);
+    }
 
-        if (score > PlayerPrefs.GetInt($"{scoreString}Highscore", 0))
-        {
-            PlayerPrefs.SetInt($"{scoreString}Highscore", score);
-        }
+    public void ScoreUp(int amount = 1)
+    {
+        score += amount;
+        scoreTextComponent.text = score.ToString();
     }
 
     public void LoseLife()
     {
         lives--;
+        livesTextComponent.text = lives.ToString();
+
 
         if (lives <= 0)
         {
@@ -52,15 +61,21 @@ public class ScoreManager : MonoBehaviour
 
     public void SetVariables(string minigame, int difficultyLevel, string subject)
     {
+        Time.timeScale = 1f;
         lives = maxLives;
         score = 0;
         scoreString = minigame + difficultyLevel.ToString();
-        loseScreen.SetActive(false);
+        loseScreen.gameObject.SetActive(false);
+
+        livesTextComponent.text = lives.ToString();
+        scoreTextComponent.text = score.ToString();
     }
 
     IEnumerator LoseCoroutine()
     {
         yield return new WaitForSeconds(1f);
-        loseScreen.SetActive(true);
+        loseScreen.gameObject.SetActive(true);
+        loseScreen.Setup(scoreString);
+        Time.timeScale = 0f;
     }
 }

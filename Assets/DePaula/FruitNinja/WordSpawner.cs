@@ -28,8 +28,10 @@ public class WordSpawner : MonoBehaviour
 
 
 
-    public void StartSpawning()
+    public void StartSpawning(int level)
     {
+        difficultyLevel = level;
+        ScoreManager.instance.SetVariables("FruitNinja", level, currentSubject.ToString());
         IEnumerator coroutine = SpawnCoroutine();
         StartCoroutine(coroutine);
     }

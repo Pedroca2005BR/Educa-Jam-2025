@@ -67,9 +67,10 @@ public class GateSpawner : MonoBehaviour
     //public GameObject rightGatePrefab;
     public float gateOffsetX = 3f;
 
-    [Header("Referências")]
+    [Header("Perguntas")]
     public QuestionManager questionManager; // Pode deixar vazio que será preenchido automaticamente
-    public TMP_Text questionText; // Texto no Canvas para mostrar a pergunta
+    //public TMP_Text questionText; // Texto no Canvas para mostrar a pergunta
+    public GameObject questionHolderPrefab;
 
     void Start()
     {
@@ -89,9 +90,10 @@ public class GateSpawner : MonoBehaviour
         // Pega uma pergunta aleatória
         MathQuestion q = questionManager.GetRandomQuestion();
 
-        // Atualiza o texto na tela
-        if (questionText != null)
-            questionText.text = q.question;
+        // Gera o texto de pergunta
+        GameObject questionHold = Instantiate(questionHolderPrefab, position + Vector3.up * gateOffsetX, Quaternion.identity, parentTile);
+        questionHold.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = q.question;
+        
 
         int correct = q.correctAnswer;
         int wrong = questionManager.GetWrongAnswer(correct);

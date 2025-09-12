@@ -31,7 +31,8 @@ public class CuttableBehaviour : MonoBehaviour
 
             if (correctAnswer)
             {
-                ScoreManager.instance.score++;
+                //ScoreManager.instance.score++;
+                ScoreManager.instance.ScoreUp();
                 animator.SetTrigger("CorrectHit");
             }
             else
