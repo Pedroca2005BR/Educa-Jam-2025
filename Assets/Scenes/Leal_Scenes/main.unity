@@ -892,8 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f21fa04d4668774b83aa7f16c6c591d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftGatePrefab: {fileID: 5349652620293967571, guid: e8ec40793e7d3da418761049d47605de, type: 3}
-  rightGatePrefab: {fileID: 2419826334054331220, guid: 3050941afda83b6469ff27abe124a479, type: 3}
+  gatePrefab: {fileID: 2419826334054331220, guid: 3050941afda83b6469ff27abe124a479, type: 3}
   gateOffsetX: 3
   questionManager: {fileID: 2077360478}
   questionText: {fileID: 0}
