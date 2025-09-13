@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StringDatabase", menuName = "Scriptable Objects/StringDatabase")]
+[CreateAssetMenu(fileName = "StringDatabase", menuName = "Scriptable Objects/FruitNinjaDatabase")]
 public class StringImageDatabase : ScriptableObject
 {
     public List<StringImageTuple> database;
