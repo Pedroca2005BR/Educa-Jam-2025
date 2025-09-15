@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 public class QuestionsGenerator : MonoBehaviour
 {
@@ -54,11 +55,15 @@ public class QuestionsGenerator : MonoBehaviour
         {
             answersText[i].text = array[i];
         }
+
+        ChangeColor(true);
     }
 
     public void ChooseAnswer(TextMeshProUGUI answer)
     {
         if (currentQuestion == null) return;
+
+        ChangeColor(false);
 
         if (currentQuestion.TestAnswer(answer.text))
         {
@@ -67,6 +72,30 @@ public class QuestionsGenerator : MonoBehaviour
         else
         {
             ScoreManager.instance.LoseLife();
+        }
+    }
+
+    private void ChangeColor(bool reset)
+    {
+        foreach (TextMeshProUGUI item in answersText)
+        {
+            if (reset)
+            {
+                item.transform.GetComponentInParent<Image>().enabled = false;
+                
+            }
+            else if (currentQuestion.TestAnswer(item.text))
+            {
+                item.transform.GetComponentInParent<Image>().enabled = true;
+                item.transform.GetComponentInParent<Image>().color = Color.green;
+            }
+            else
+            {
+                item.transform.GetComponentInParent<Image>().enabled = true;
+                item.transform.GetComponentInParent<Image>().color = Color.red;
+            }
+
+            item.transform.GetComponentInParent<Image>().enabled = true;
         }
     }
 }

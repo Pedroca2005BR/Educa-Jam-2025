@@ -347,6 +347,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 293290214}
+  - {fileID: 2103465508}
   - {fileID: 1577707567}
   - {fileID: 1140481457}
   - {fileID: 2037676551}
@@ -1152,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subject: 4
-  sceneName: FruitNinja
+  sceneName: Q&A
 --- !u!114 &809749356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,8 +1561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -407.5}
-  m_SizeDelta: {x: 0, y: -815}
+  m_AnchoredPosition: {x: 0, y: -551.359}
+  m_SizeDelta: {x: 0, y: -1102.718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140481458
 MonoBehaviour:
@@ -1632,8 +1633,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioSource: {fileID: 0}
-    name: 
-    clip: {fileID: 0}
+    name: Menu
+    clip: {fileID: 8300000, guid: 779f571fe593ba745936fb351334913a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: GameOver
+    clip: {fileID: 8300000, guid: 323fe48a470071b4fabf0b86c3356d1d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: LixoNaoReciclavel
+    clip: {fileID: 8300000, guid: 29348a83e586e7b42a3d589a8525b427, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: LixoReciclavel
+    clip: {fileID: 8300000, guid: 14c3bc02222400d45a0891c7872d44ce, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: PointUp
+    clip: {fileID: 8300000, guid: 25bbb139b82addd4da98ff671ea39779, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: FundoReciclagem
+    clip: {fileID: 8300000, guid: 17a0548bef410da46b08a619b35a0957, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: Fundo
+    clip: {fileID: 8300000, guid: 7deb479730494fc4ab982d8f4a50ae7e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: LoseLife
+    clip: {fileID: 8300000, guid: 9f6d3f7569e240149955076d4995ad02, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: FundoQ&A
+    clip: {fileID: 8300000, guid: d2e251c623663d844845f235ad4c999c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: Giz
+    clip: {fileID: 8300000, guid: bd824af19eeb79140a37c7ad7432a4f2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: CorrectAnswer
+    clip: {fileID: 8300000, guid: 71ab091eb103475409b4ab82712d44f4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: WrongAnswer
+    clip: {fileID: 8300000, guid: b4fa2cc216f9ea34dada059a3b279b61, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -1953,7 +2020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 290}
+  m_AnchoredPosition: {x: 0, y: 29}
   m_SizeDelta: {x: 920, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577707568
@@ -2283,6 +2350,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8633802818264478062, guid: 581de865b7deb834ca96a996e0601f78, type: 3}
   m_PrefabInstance: {fileID: 873839972249210027}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2103465507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103465508}
+  - component: {fileID: 2103465510}
+  - component: {fileID: 2103465509}
+  m_Layer: 5
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2103465508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103465507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 112648317}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 495}
+  m_SizeDelta: {x: 700, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2103465509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103465507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6210758183650995034, guid: 258878b5215666d498b545205bb6b413, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2103465510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103465507}
+  m_CullTransparentMesh: 1
 --- !u!1001 &873839972249210027
 PrefabInstance:
   m_ObjectHideFlags: 0

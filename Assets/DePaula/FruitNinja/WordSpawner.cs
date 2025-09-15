@@ -18,6 +18,7 @@ public class WordSpawner : MonoBehaviour
 
     int difficultyLevel = 0;
     Subject currentSubject = Subject.Portuguese;
+    Continent currentContinent = Continent.America;
 
     private void Start()
     {
@@ -32,6 +33,13 @@ public class WordSpawner : MonoBehaviour
     {
         difficultyLevel = level;
         ScoreManager.instance.SetVariables("FruitNinja", level, currentSubject.ToString());
+        IEnumerator coroutine = SpawnCoroutine();
+        StartCoroutine(coroutine);
+    }
+    public void StartSpawning(Continent continent)
+    {
+        currentContinent = continent;
+        ScoreManager.instance.SetVariables("FruitNinja", difficultyLevel, currentSubject.ToString());
         IEnumerator coroutine = SpawnCoroutine();
         StartCoroutine(coroutine);
     }
@@ -97,6 +105,16 @@ public class WordSpawner : MonoBehaviour
 
         // Settar se eh resposta certa
         obj.GetComponent<CuttableBehaviour>().correctAnswer = tuple.isCorrectAnswer;
+    }
+
+    public bool TestContinent(Continent c)
+    {
+        if (currentSubject == Subject.Geography && c == currentContinent)
+        {
+            return true;
+        }
+
+        return false;
     }
 
 

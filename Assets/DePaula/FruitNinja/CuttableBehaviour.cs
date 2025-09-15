@@ -9,6 +9,7 @@ public class CuttableBehaviour : MonoBehaviour
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     [SerializeField] Image Image;
     public bool correctAnswer = false;
+    public Continent continent;
 
     Animator animator;
     Rigidbody2D rb;
@@ -29,7 +30,7 @@ public class CuttableBehaviour : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             boxCollider.enabled = false;
 
-            if (correctAnswer)
+            if (correctAnswer || transform.GetComponentInParent<WordSpawner>().TestContinent(continent))
             {
                 //ScoreManager.instance.score++;
                 ScoreManager.instance.ScoreUp();
