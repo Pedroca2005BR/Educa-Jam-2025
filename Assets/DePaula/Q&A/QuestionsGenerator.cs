@@ -35,8 +35,13 @@ public class QuestionsGenerator : MonoBehaviour
         return null;
     }
 
-    public void GenerateQuestionAnswer()
+    public void GenerateQuestionAnswer(int level = 0)
     {
+        if (level != 0)
+        {
+            difficultyLevel = level;
+        }
+
         currentQuestion = GetRandomItem();
 
         if (currentQuestion == null) return;
@@ -47,15 +52,15 @@ public class QuestionsGenerator : MonoBehaviour
 
         for(int i = 0; i < array.Count; i++)
         {
-            answersText[i].text = "A) " + array[i];
+            answersText[i].text = array[i];
         }
     }
 
-    public void ChooseAnswer(string answer)
+    public void ChooseAnswer(TextMeshProUGUI answer)
     {
         if (currentQuestion == null) return;
 
-        if (currentQuestion.TestAnswer(answer))
+        if (currentQuestion.TestAnswer(answer.text))
         {
             ScoreManager.instance.ScoreUp();
         }
