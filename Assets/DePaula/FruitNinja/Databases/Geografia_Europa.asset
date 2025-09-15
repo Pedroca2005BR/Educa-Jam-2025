@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6339701afd06da7468a93b1003f529e9, type: 3}
+  m_Name: Geografia_Europa
+  m_EditorClassIdentifier: 
+  database:
+  - text: 
+    image: {fileID: 3890403453145951800, guid: 181e0f03c46b2314696b738702649cc2, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: -6107295540645195829, guid: 09014e40672ab4e47960254b3285429e, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: 6909870013855896904, guid: 40c842acfcde5fa40bb42163f4cbba22, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: -7615495556686330476, guid: 93c5b45a06987b04cbc67bff5594b412, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: 704313716709781812, guid: 091852f6915c3d7489d913992dc58a36, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: 7545722572267176117, guid: bf9d7e852eb685742adee533c4956d01, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: 7336012098961639873, guid: 9d39df25f712a4b46a76e4520f0118e7, type: 3}
+    isCorrectAnswer: 0
+    continent: 1
+  - text: 
+    image: {fileID: 5257949920208685051, guid: c9b4387aa56dd3944a2dd1656660738b, type: 3}
+    isCorrectAnswer: 0
+    continent: 1

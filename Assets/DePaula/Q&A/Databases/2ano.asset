@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d582e38f6df9f2d41bb8758e0ac8121b, type: 3}
+  m_Name: 2ano
+  m_EditorClassIdentifier: 
+  database:
+  - question: "O que \xE9 uma linha do tempo?\n"
+    correctAnswer: ' Uma maneira de organizar os acontecimentos na ordem em que aconteceram '
+    otherOptions:
+    - 'Uma corda para brincar '
+    - "Um rel\xF3gio grande "
+  - question: "Qual \xE9 a fun\xE7\xE3o do prefeito na cidade?\n"
+    correctAnswer: "Cuidar da administra\xE7\xE3o da cidade "
+    otherOptions:
+    - 'Ensinar na escola '
+    - 'Trabalhar no hospital '
+  - question: "O que \xE9 uma comunidade?\n"
+    correctAnswer: "Um grupo de pessoas que vivem no mesmo espa\xE7o e convivem entre
+      si "
+    otherOptions:
+    - "Apenas uma fam\xEDlia "
+    - 'Apenas um grupo de amigos '
+  - question: "Qual destes meios de transporte existia h\xE1 mais tempo?\n"
+    correctAnswer: "Carro\xE7a "
+    otherOptions:
+    - "Avi\xE3o "
+    - Carro
+  - question: 'O que podemos encontrar em um museu?
+
+'
+    correctAnswer: 'Objetos e registros antigos '
+    otherOptions:
+    - Somente computadores
+    - 'Brinquedos atuais '

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d582e38f6df9f2d41bb8758e0ac8121b, type: 3}
+  m_Name: 3ano
+  m_EditorClassIdentifier: 
+  database:
+  - question: "A cidade onde moramos \xE9 parte de:\n"
+    correctAnswer: "Um pa\xEDs "
+    otherOptions:
+    - 'Um planeta diferente '
+    - Apenas um bairro
+  - question: "O que significa \u201Ccultura\u201D?\n"
+    correctAnswer: ' O jeito de viver, as festas, comidas e costumes de um povo '
+    otherOptions:
+    - "As coisas que aprendemos na escola de matem\xE1tica "
+    - "Apenas a l\xEDngua que falamos "
+  - question: 'Quem vivia no Brasil antes dos portugueses chegarem?
+
+'
+    correctAnswer: "Povos ind\xEDgenas "
+    otherOptions:
+    - 'Europeus '
+    - Africanos
+  - question: "O que podemos aprender estudando a hist\xF3ria da nossa cidade?\n"
+    correctAnswer: ' Como ela foi criada e como mudou ao longo do tempo '
+    otherOptions:
+    - 'Apenas nomes de ruas '
+    - ' Apenas sobre o presente '
+  - question: "Os povos ind\xEDgenas contribu\xEDram com palavras da nossa l\xEDngua,
+      como: "
+    correctAnswer: ' Como ela foi criada e como mudou ao longo do tempo '
+    otherOptions:
+    - ' Banana, feijoada '
+    - ' Apenas sobre o presente '
