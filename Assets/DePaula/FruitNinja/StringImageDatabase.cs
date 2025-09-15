@@ -32,10 +32,18 @@ public class StringImageTuple
     public string text;
     public Sprite image;
     public bool isCorrectAnswer;
+    public Continent continent;
 
     public StringImageTuple(string text, Sprite image)
     {
         this.text = text;
         this.image = image;
     }
+}
+
+public enum Continent
+{
+    America = 0,
+    Europa = 1,
+    Asia = 2
 }
