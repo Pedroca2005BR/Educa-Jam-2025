@@ -32,7 +32,7 @@ public class QuestionsGenerator : MonoBehaviour
             }
         }
 
-        Debug.LogError("Can't find suitable database to get item from!");
+        Debug.LogError("Can't find suitable database to get item from! " + currentSubject.ToString() + difficultyLevel.ToString());
         return null;
     }
 
@@ -40,6 +40,7 @@ public class QuestionsGenerator : MonoBehaviour
     {
         if (level != 0)
         {
+            currentSubject = (Subject)PlayerPrefs.GetInt("Subject", 1);
             difficultyLevel = level;
         }
 
