@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d582e38f6df9f2d41bb8758e0ac8121b, type: 3}
+  m_Name: 1ano
+  m_EditorClassIdentifier: 
+  database:
+  - question: "Quando dizemos \"amanh\xE3\", estamos falando de:\n"
+    correctAnswer: 'O dia que ainda vai acontecer '
+    otherOptions:
+    - "O dia que j\xE1 passou "
+    - "O dia que est\xE1 acontecendo agora "
+  - question: "Qual destes \xE9 um exemplo de tradi\xE7\xE3o?\n"
+    correctAnswer: Fazer festa junina
+    otherOptions:
+    - 'Jogar videogame '
+    - 'Comer fast-food '
+  - question: "Qual \xE9 a diferen\xE7a entre o passado e o presente?\n"
+    correctAnswer: "O passado j\xE1 aconteceu, o presente acontece agora "
+    otherOptions:
+    - 'O passado ainda vai acontecer '
+    - "O presente \xE9 sempre igual ao passado "
+  - question: "Quando dizemos que algo aconteceu \u201Ch\xE1 muito tempo\u201D, estamos
+      falando de:\n"
+    correctAnswer: 'Passado '
+    otherOptions:
+    - 'Futuro '
+    - Presente
+    - Passado
+  - question: "O que significa \u201Contem\u201D?"
+    correctAnswer: "O dia que j\xE1 passou "
+    otherOptions:
+    - 'O tempo que ainda vai acontecer '
+    - O dia de hoje
