@@ -37,7 +37,7 @@ MonoBehaviour:
     - ' Apenas sobre o presente '
   - question: "Os povos ind\xEDgenas contribu\xEDram com palavras da nossa l\xEDngua,
       como: "
-    correctAnswer: ' Como ela foi criada e como mudou ao longo do tempo '
+    correctAnswer: "A\xE7a\xED e Tucano"
     otherOptions:
-    - ' Banana, feijoada '
-    - ' Apenas sobre o presente '
+    - Pizza e Hamburguer
+    - "P\xE3o e Cavalo"

@@ -16,8 +16,8 @@ MonoBehaviour:
   - question: "Quando dizemos \"amanh\xE3\", estamos falando de:\n"
     correctAnswer: 'O dia que ainda vai acontecer '
     otherOptions:
-    - "O dia que j\xE1 passou "
     - "O dia que est\xE1 acontecendo agora "
+    - "O dia que j\xE1 passou "
   - question: "Qual destes \xE9 um exemplo de tradi\xE7\xE3o?\n"
     correctAnswer: Fazer festa junina
     otherOptions:
@@ -29,12 +29,11 @@ MonoBehaviour:
     - 'O passado ainda vai acontecer '
     - "O presente \xE9 sempre igual ao passado "
   - question: "Quando dizemos que algo aconteceu \u201Ch\xE1 muito tempo\u201D, estamos
-      falando de:\n"
+      falando de:"
     correctAnswer: 'Passado '
     otherOptions:
     - 'Futuro '
     - Presente
-    - Passado
   - question: "O que significa \u201Contem\u201D?"
     correctAnswer: "O dia que j\xE1 passou "
     otherOptions:

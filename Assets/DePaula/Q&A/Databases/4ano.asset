@@ -12,4 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d582e38f6df9f2d41bb8758e0ac8121b, type: 3}
   m_Name: 4ano
   m_EditorClassIdentifier: 
-  database: []
+  database:
+  - question: "O que \xE9 patrim\xF4nio cultural?"
+    correctAnswer: "Coisas Importantes para a hist\xF3ria de um povo, como festas,
+      m\xFAsicas e constru\xE7\xF5es antigas"
+    otherOptions:
+    - Algo que pertence apenas ao governo
+    - "Apenas pr\xE9dios velhos"
+  - question: "Qual foi a principal atividade econ\xF4mica do Brasil Col\xF4nia?"
+    correctAnswer: Agricultura
+    otherOptions:
+    - "Com\xE9rcio de computadores"
+    - "Transporte a\xE9reo"
+  - question: Qual foi o primeiro produto explorado pelos portugueses no Brasil?
+    correctAnswer: Pau-Brasil
+    otherOptions:
+    - Ouro
+    - "Caf\xE9"
+  - question: "Qual foi a capital do Brasil durante muitos anos na \xE9poca colonial?"
+    correctAnswer: Salvador
+    otherOptions:
+    - Rio de Janeiro
+    - "S\xE3o Paulo"
+  - question: "O que eram os engenhos no Brasil Col\xF4nia?"
+    correctAnswer: "Fazendas de cana-de-a\xE7\xFAcar"
+    otherOptions:
+    - "Ind\xFAstrias de computa\xE7\xE3o"
+    - Casas pequenas de trabalhadores livres

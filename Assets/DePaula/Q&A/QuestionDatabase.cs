@@ -46,7 +46,7 @@ public class QuestionAnswer
 
     public List<string> GetRandomizedArray()
     {
-        List<string> array = otherOptions;
+        List<string> array = new List<string>(otherOptions.ToArray());
 
         array.Add(correctAnswer);
 

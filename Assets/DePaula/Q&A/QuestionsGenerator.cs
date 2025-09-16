@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class QuestionsGenerator : MonoBehaviour
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<TextMeshProUGUI> answersText;
     [Space]
+    [Range(0.1f, 5f)] public float generateCooldown = 1f;
+    private bool generating = false;
     [Header("Databases")]
     public List<QuestionDatabaseConfig> databases;
 
@@ -42,6 +45,7 @@ public class QuestionsGenerator : MonoBehaviour
         {
             currentSubject = (Subject)PlayerPrefs.GetInt("Subject", 1);
             difficultyLevel = level;
+            ScoreManager.instance.SetVariables("FruitNinja", level, currentSubject.ToString());
         }
 
         currentQuestion = GetRandomItem();
@@ -62,7 +66,7 @@ public class QuestionsGenerator : MonoBehaviour
 
     public void ChooseAnswer(TextMeshProUGUI answer)
     {
-        if (currentQuestion == null) return;
+        if (currentQuestion == null || generating) return;
 
         ChangeColor(false);
 
@@ -74,6 +78,18 @@ public class QuestionsGenerator : MonoBehaviour
         {
             ScoreManager.instance.LoseLife();
         }
+
+        IEnumerator coroutine = WaitAndGenerateAgain();
+        StartCoroutine(coroutine);
+    }
+
+    IEnumerator WaitAndGenerateAgain()
+    {
+        generating = true;
+        yield return new WaitForSeconds(generateCooldown);
+        GenerateQuestionAnswer();
+        yield return new WaitForSeconds(0.2f);
+        generating = false;
     }
 
     private void ChangeColor(bool reset)
@@ -94,9 +110,7 @@ public class QuestionsGenerator : MonoBehaviour
             {
                 item.transform.GetComponentInParent<Image>().enabled = true;
                 item.transform.GetComponentInParent<Image>().color = Color.red;
-            }
-
-            item.transform.GetComponentInParent<Image>().enabled = true;
+            } 
         }
     }
 }

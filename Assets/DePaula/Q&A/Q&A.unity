@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 337.5099}
+  m_AnchoredPosition: {x: 0, y: 241}
   m_SizeDelta: {x: 856.9799, y: 249.8413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30396512
@@ -580,18 +580,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551661028}
-        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
-        m_MethodName: GenerateQuestionAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1551661026}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -603,6 +591,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1551661028}
+        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
+        m_MethodName: GenerateQuestionAnswer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 501131324}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -691,7 +691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -169}
+  m_AnchoredPosition: {x: 0, y: -370}
   m_SizeDelta: {x: 756.9799, y: 149.8413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214956485
@@ -958,7 +958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 83}
+  m_AnchoredPosition: {x: 0, y: -98}
   m_SizeDelta: {x: 756.9799, y: 149.8413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &387986645
@@ -1446,18 +1446,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551661028}
-        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
-        m_MethodName: GenerateQuestionAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1551661026}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1469,6 +1457,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1551661028}
+        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
+        m_MethodName: GenerateQuestionAnswer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 501131324}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2852,6 +2852,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 70989875}
     m_Modifications:
+    - target: {fileID: 3055788012601342358, guid: 4adb7e0584e1fac44950ece9e2615fa7, type: 3}
+      propertyPath: loseScreen
+      value: 
+      objectReference: {fileID: 404875434}
     - target: {fileID: 4299815236272742637, guid: 4adb7e0584e1fac44950ece9e2615fa7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3037,18 +3041,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551661028}
-        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
-        m_MethodName: GenerateQuestionAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1551661026}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3060,6 +3052,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1551661028}
+        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
+        m_MethodName: GenerateQuestionAnswer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 501131324}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3330,18 +3334,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551661028}
-        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
-        m_MethodName: GenerateQuestionAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1551661026}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3353,6 +3345,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1551661028}
+        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
+        m_MethodName: GenerateQuestionAnswer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 501131324}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3487,18 +3491,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551661028}
-        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
-        m_MethodName: GenerateQuestionAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1551661026}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3510,6 +3502,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1551661028}
+        m_TargetAssemblyTypeName: QuestionsGenerator, Assembly-CSharp
+        m_MethodName: GenerateQuestionAnswer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 501131324}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -4605,7 +4609,7 @@ MonoBehaviour:
   - {fileID: 1090005644}
   - {fileID: 946878843}
   - {fileID: 818343090}
-  - {fileID: 2145904669}
+  generateCooldown: 1
   databases:
   - database: {fileID: 11400000, guid: 6d16e7204585c534ca63d8ddad2c6565, type: 2}
     subject: 4
@@ -4930,7 +4934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1894292585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5162,7 +5166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -421}
+  m_AnchoredPosition: {x: 0, y: -639}
   m_SizeDelta: {x: 756.9799, y: 149.8413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023207234

@@ -12,4 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d582e38f6df9f2d41bb8758e0ac8121b, type: 3}
   m_Name: 5ano
   m_EditorClassIdentifier: 
-  database: []
+  database:
+  - question: O que aconteceu em 1500 no Brasil?
+    correctAnswer: "Chegada de Pedro \xC1lvares Cabral"
+    otherOptions:
+    - "Independ\xEAncia do Brasil"
+    - "Fim da escravid\xE3o"
+  - question: Quem era Dom Pedro II?
+    correctAnswer: Segundo Imperador do Brasil
+    otherOptions:
+    - Primeiro Imperador do Brasil
+    - Presidente do Brasil
+  - question: "Quem assinou a Lei \xC1urea em 1888?"
+    correctAnswer: Princesa Isabel
+    otherOptions:
+    - Rainha Elizabeth II
+    - Dom Pedro I
+  - question: "Qual era o principal objetivo das navega\xE7\xF5es portuguesas?"
+    correctAnswer: "Explorar terras, riquezas e criar rotas de com\xE9rcio"
+    otherOptions:
+    - Conhecer novas culturas
+    - "Descobrir a Am\xE9rica"
+  - question: De onde vieram os primeiros seres humanos?
+    correctAnswer: "\xC1frica"
+    otherOptions:
+    - Oceania
+    - Estados Unidos
