@@ -12,9 +12,15 @@ public class Gate : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (isCorrect)
+            {
                 Debug.Log("Acertou!");
+                ScoreManager.instance.ScoreUp();
+            }
             else
+            {
                 Debug.Log("Errou!");
+                ScoreManager.instance.LoseLife();
+            }
 
             // depois de passar, opcionalmente destrói o portão
             Destroy(gameObject);

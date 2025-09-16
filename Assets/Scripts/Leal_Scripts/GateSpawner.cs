@@ -62,6 +62,10 @@ using TMPro; // Se usar TextMeshPro para mostrar a pergunta
 
 public class GateSpawner : MonoBehaviour
 {
+    [Header("Basics")]
+    public int level;
+    public Subject subject;
+
     [Header("Portões")]
     public GameObject gatePrefab;
     //public GameObject rightGatePrefab;
@@ -77,6 +81,8 @@ public class GateSpawner : MonoBehaviour
         // Se não foi arrastado no Inspector, pega automaticamente o QuestionManager no mesmo objeto
         if (questionManager == null)
             questionManager = GetComponent<QuestionManager>();
+
+        ScoreManager.instance.SetVariables("MathMinigame", level, subject.ToString());
     }
 
     public void SpawnGateAt(Vector3 position, Transform parentTile)
@@ -120,6 +126,6 @@ public class GateSpawner : MonoBehaviour
             //rightGateScript.isCorrect = !leftIsCorrect;
         }
 
-        Debug.Log($"Pergunta: {q.question}, esquerda: {leftGateScript.gateValue}, direita: {rightGateScript.gateValue}");
+        //Debug.Log($"Pergunta: {q.question}, esquerda: {leftGateScript.gateValue}, direita: {rightGateScript.gateValue}");
     }
 }
